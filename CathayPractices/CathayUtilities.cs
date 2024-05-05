@@ -6,6 +6,16 @@
 
         public static List<decimal> CalculateInterestAndOrderThem(string[] amountList)
         {
+            return Order(CalculateInterest(amountList));
+        }
+
+        private static List<decimal> Order(List<decimal> interest)
+        {
+            return [.. interest.OrderBy(x => -x)];
+        }
+
+        private static List<decimal> CalculateInterest(string[] amountList)
+        {
             var interest = new List<decimal>();
             foreach (var amount in amountList)
             {
@@ -19,7 +29,7 @@
                 }
             }
 
-            return [.. interest.OrderBy(x => -x)];
+            return interest;
         }
     }
 }
