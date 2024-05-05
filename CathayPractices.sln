@@ -5,6 +5,14 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CathayPractices", "CathayPractices\CathayPractices.csproj", "{450AB5EC-CFD8-41B6-9F15-1EF7B94ADCA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CathayPractices.UnitTests", "CathayPractices.UnitTests\CathayPractices.UnitTests.csproj", "{AB1526E5-A357-404B-ACF6-43E8B578B089}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7ACDDB14-14BB-4BD0-B0E9-53C88E7F2EE0}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
