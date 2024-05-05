@@ -21,5 +21,15 @@ namespace CathayPractices.UnitTests
 
             Assert.Equal([0M], result);
         }
+
+        [Fact]
+        public void CalculateInterestAndOrderThem_MultipleAmounts_ReturnsZero()
+        {
+            string[] amountList = ["1.2", "1.4"];
+
+            var result = CathayUtilities.CalculateInterestAndOrderThem(amountList);
+
+            Assert.Equal([0.462M, 0.396M], result);
+        }
     }
 }

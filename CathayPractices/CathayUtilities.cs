@@ -19,7 +19,7 @@
                 }
             }
 
-            return interest;
+            return [.. interest.OrderBy(x => -x)];
         }
     }
 }
