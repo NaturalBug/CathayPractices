@@ -9,7 +9,14 @@
             var interest = new List<decimal>();
             foreach (var amount in amountList)
             {
-                interest.Add(decimal.Parse(amount) * INTERES_RATE);
+                if (amount.Equals("-"))
+                {
+                    interest.Add(0M);
+                }
+                else
+                {
+                    interest.Add(decimal.Parse(amount) * INTERES_RATE);
+                }
             }
 
             return interest;

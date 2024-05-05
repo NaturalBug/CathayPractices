@@ -11,5 +11,15 @@ namespace CathayPractices.UnitTests
 
             Assert.Equal([0.396M], result);
         }
+
+        [Fact]
+        public void CalculateInterestAndOrderThem_InputMinusSign_ReturnsZero()
+        {
+            string[] amountList = ["-"];
+
+            var result = CathayUtilities.CalculateInterestAndOrderThem(amountList);
+
+            Assert.Equal([0M], result);
+        }
     }
 }
