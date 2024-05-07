@@ -1,6 +1,8 @@
-﻿namespace CathayPractices.UnitTests
+﻿namespace CathayPractices
 {
-    public static class CathayUtilities
+    using System.Text.RegularExpressions;
+
+    public static partial class CathayUtilities
     {
         private const decimal INTERES_RATE = 0.33M;
 
@@ -31,5 +33,19 @@
 
             return interest;
         }
+
+        public static string MaskCreditCardNumber(string creditCardNumber)
+        {
+            var matched = CreditCardRegex().Match(creditCardNumber);
+            if (matched.Success)
+            {
+                return $"****-****-****-{matched.Groups[1].Value}";
+            }
+
+            return string.Empty;
+        }
+
+        [GeneratedRegex(@"\d+(\d{4})", RegexOptions.Compiled)]
+        private static partial Regex CreditCardRegex();
     }
 }

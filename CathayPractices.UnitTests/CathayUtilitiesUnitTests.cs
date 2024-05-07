@@ -31,5 +31,15 @@ namespace CathayPractices.UnitTests
 
             Assert.Equal([0.462M, 0.396M, 0.066M, 0M, -0.00165M], result);
         }
+
+        [Fact]
+        public void MaskCreditCardNumber_sixteenDigits_ReturnsFourPartWithDashAndLastPartUnmasked()
+        {
+            var creditCardNumber = "0123456789012345";
+
+            var result = CathayUtilities.MaskCreditCardNumber(creditCardNumber);
+
+            Assert.Equal("****-****-****-2345", result);
+        }
     }
 }
