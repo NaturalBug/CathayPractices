@@ -51,5 +51,22 @@ namespace CathayPractices.UnitTests
 
             Assert.Equal("****-****-8901", result);
         }
+
+        [Theory]
+        [InlineData("01234567890")]
+        [InlineData("A12345678901")]
+        [InlineData("12345678901B")]
+        [InlineData("0123456789012")]
+        [InlineData("01234567890123")]
+        [InlineData("012345678901234")]
+        [InlineData("C123456789012345")]
+        [InlineData("123456789012345D")]
+        [InlineData("01234567890123456")]
+        public void MaskCreditCardNumber_NeitherSixteenNorTwelveDigits_ReturnsEmptyString(string creditCardNumber)
+        {
+            var result = CathayUtilities.MaskCreditCardNumber(creditCardNumber);
+
+            Assert.Equal(string.Empty, result);
+        }
     }
 }

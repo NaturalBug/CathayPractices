@@ -52,7 +52,7 @@
             return string.Empty;
         }
 
-        [GeneratedRegex(@"\d+(\d{4})", RegexOptions.Compiled)]
+        [GeneratedRegex(@"^\d+(\d{4})$", RegexOptions.Compiled)]
         private static partial Regex CreditCardRegex();
     }
 }
