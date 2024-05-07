@@ -33,7 +33,7 @@ namespace CathayPractices.UnitTests
         }
 
         [Fact]
-        public void MaskCreditCardNumber_sixteenDigits_ReturnsFourPartWithDashAndLastPartUnmasked()
+        public void MaskCreditCardNumber_SixteenDigits_ReturnsFourthPartWithDashAndLastPartUnmasked()
         {
             var creditCardNumber = "0123456789012345";
 
