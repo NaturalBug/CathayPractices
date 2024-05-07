@@ -39,7 +39,14 @@
             var matched = CreditCardRegex().Match(creditCardNumber);
             if (matched.Success)
             {
-                return $"****-****-****-{matched.Groups[1].Value}";
+                if (creditCardNumber.Length.Equals(16))
+                {
+                    return $"****-****-****-{matched.Groups[1].Value}";
+                }
+                else if (creditCardNumber.Length.Equals(12))
+                {
+                    return $"****-****-{matched.Groups[1].Value}";
+                }
             }
 
             return string.Empty;
