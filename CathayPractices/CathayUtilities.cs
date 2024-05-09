@@ -54,5 +54,15 @@
 
         [GeneratedRegex(@"^\d+(\d{4})$", RegexOptions.Compiled)]
         private static partial Regex CreditCardRegex();
+
+        public static string? ToString<T>(T input)
+        {
+            if (input is not null)
+            {
+                return input.ToString();
+            }
+
+            return null;
+        }
     }
 }

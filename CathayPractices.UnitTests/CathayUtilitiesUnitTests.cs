@@ -68,5 +68,25 @@ namespace CathayPractices.UnitTests
 
             Assert.Equal(string.Empty, result);
         }
+
+        [Fact]
+        public void ToString_InputIntType_ReturnsStringOfNumber()
+        {
+            int number = 888;
+
+            var result = CathayUtilities.ToString(number);
+
+            Assert.Equal("888", result);
+        }
+
+        [Fact]
+        public void ToString_InputIsNull_ReturnsNull()
+        {
+            int? input = null;
+
+            var result = CathayUtilities.ToString(input);
+
+            Assert.Null(result);
+        }
     }
 }
