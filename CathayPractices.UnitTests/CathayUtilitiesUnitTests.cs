@@ -88,5 +88,15 @@ namespace CathayPractices.UnitTests
 
             Assert.Null(result);
         }
+
+        [Fact]
+        public void ToString_InputDateTimeType_ReturnsYYYYMMDDSeparateBySlash()
+        {
+            var dateTime = new DateTime(2022, 6, 2, 12, 05, 33, DateTimeKind.Local);
+
+            var result = CathayUtilities.ToString(dateTime);
+
+            Assert.Equal("2022/06/02", result);
+        }
     }
 }

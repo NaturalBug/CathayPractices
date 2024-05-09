@@ -59,6 +59,11 @@
         {
             if (input is not null)
             {
+                if (input is DateTime)
+                {
+                    return ((DateTime)(object)input).ToString("yyyy/MM/dd");
+                }
+
                 return input.ToString();
             }
 
